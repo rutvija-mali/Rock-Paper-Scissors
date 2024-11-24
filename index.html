@@ -5,9 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock-Paper-Scissors</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dangrek&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    
+    <div class="main-container">
+      <header class="score-board">
+         <div class="title-box">
+           <h1>ROCK</h1>
+           <h1>PAPER</h1>
+           <h1>SCISSORS</h1>
+         </div>
+         <div class="score-col">
+               <div class="score-square">
+                    <div class="player-name">
+                      <h3>COMPUTER</h3>
+                      <h3>SCORE</h3>
+                    </div>
+                    <div class="score">
+                      <span class=" score-value computer-score">0</span>
+                    </div>
+               </div>
+               <div class="score-square">
+                  <div class="player-name">
+                    <h3>YOUR</h3>
+                    <h3>SCORE</h3>
+                  </div>
+                   <div class="score">
+                     <span class="score-value user-score">0</span>
+                   </div>
+               </div>
+         </div>
+        </header>
+      <section class="game-board" >
+        <div class="btn" id="rock" >
+          <div class="choose rock" data-choice="rock" >
+            <img src="./imges/rock.png" alt="rock-img">
+          </div>
+        </div>
+        <div class="btn" id="scissor" >
+          <div class="choose scissor" data-choice="scissors">
+            <img src="./imges/scissors.png" alt="rock-img">
+          </div>
+        </div>
+        <div class="btn" id="paper" >
+          <div class="choose paper" data-choice="paper">
+            <img src="./imges/paper.png" alt="rock-img">
+          </div>
+        </div>
+         <!-- SVG for connecting lines -->
+       
+      </section>
+      <!-- result section -->
+        <section class="result-section hidden">
+          <h3 class="result-heading player-heading">YOU PICKED</h3>
+          <h3 class="result-heading pc-heading">PC PICKED</h3>
+          <div class="result player-result"></div>
+          <div class="winner show-winner hidden">
+            <h2 class="winner-result "></h2>
+            <h3>AGAINST PC</h3>
+            <button class="play-again">PLAY AGAIN</button>
+          </div>
+          <div class="result pc-result"></div>
+        </section>
+      <!-- rules button -->
+      <button class="rule-btn">RULES</button>
+      <div class="model">
+        <div class="model-container">
+          <div class="model-header">
+             <button class="close-btn">
+               X
+             </div>
+          </div>
+          <div class="model-body">
+            <div class="model-body-heading">
+              <h3>Game Rules</h3>
+              <ul>
+                <li><span class="bullet">■</span>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+                <li><span class="bullet">■</span>Agree ahead of time whether you'll count off "rock, paper, scissors, shoot."</li>
+                <li><span class="bullet">■</span>Use rock, paper, scissors to settle minor decisions or play for fun.</li>
+                <li><span class="bullet">■</span>If both players lay down the same hand, each player lays down another hand.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
+
